@@ -1303,6 +1303,7 @@
           tipoPagamento === "pix"
             ? document.getElementById("presenteNomePix").value
             : document.getElementById("presenteNomeCartao").value;
+
         const mensagem =
           tipoPagamento === "pix"
             ? document.getElementById("presenteMensagemPix").value
@@ -1310,23 +1311,40 @@
 
         if (!nome) {
           alert("Digite seu nome antes de continuar.");
-          return;
+          return false;
         }
 
-        await fetch(`${API}/presente`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            presente: presenteAtual.nome,
-            valor: presenteAtual.preco,
-            nome: nome,
-            mensagem: mensagem,
-            tipo_pagamento: tipoPagamento,
-            sheet: sheet,
-          }),
-        });
+        try {
+          const response = await fetch(`${API}/presente`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              presente: presenteAtual.nome,
+              valor: presenteAtual.preco,
+              nome,
+              mensagem,
+              tipo_pagamento: tipoPagamento,
+              sheet,
+            }),
+          });
+
+          if (!response.ok) {
+            const erro = await response.text();
+            throw new Error(erro);
+          }
+
+          const dados = await response.json();
+
+          alert("Presente registrado com sucesso!");
+
+          return dados;
+        } catch (e) {
+          console.error(e);
+          alert("Erro ao registrar o presente.");
+          return false;
+        }
       }
 
       async function gerarPagamentoCartao(i) {
