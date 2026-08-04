@@ -824,8 +824,8 @@
 
         <!-- Duas imagens principais -->
         <div class="historia-top">
-          <img src="https://i.ibb.co/8L8GmXcP/CASAL1.jpg" alt="Foto 1" />
-          <img src="https://i.ibb.co/q8vrvv6/CASAL2.jpg" alt="Foto 2" />
+          <img src="./imgs/CASAL1.jpg" alt="Foto 1" />
+          <img src="./imgs/CASAL2.jpg" alt="Foto 2" />
         </div>
 
         <!-- Texto -->
@@ -862,16 +862,16 @@
 
         <!-- Galeria -->
         <div class="historia-galeria">
-          <img src="https://i.ibb.co/LXQ983cs/1.jpg" alt="" />
-          <img src="https://i.ibb.co/MYZTMHN/2.jpg" alt="" />
-          <img src="https://i.ibb.co/fY6XQGXR/3.jpg" alt="" />
-          <img src="https://i.ibb.co/fdbNBGVP/4.jpg" alt="" />
-          <img src="https://i.ibb.co/twckPSYf/5.jpg" alt="" />
-          <img src="https://i.ibb.co/N6zC9vVP/6.jpg" alt="" />
-          <img src="https://i.ibb.co/0jFFqn79/7.jpg" alt="" />
-          <img src="https://i.ibb.co/xS49xgL7/8.jpg" alt="" />
-          <img src="https://i.ibb.co/fVCvVxJH/9.jpg" alt="" />
-          <img src="https://i.ibb.co/vxb4SM8H/10.jpg" alt="" />
+          <img src="./imgs/1.jpg" alt="" />
+          <img src="./imgs/2.jpg" alt="" />
+          <img src="./imgs/3.jpg" alt="" />
+          <img src="./imgs/4.jpg" alt="" />
+          <img src="./imgs/5.jpg" alt="" />
+          <img src="./imgs/6.jpg" alt="" />
+          <img src="./imgs/7.jpg" alt="" />
+          <img src="./imgs/8.jpg" alt="" />
+          <img src="./imgs/9.jpg" alt="" />
+          <img src="./imgs/10.jpg" alt="" />
         </div>
       </section>
 
@@ -894,10 +894,7 @@
 
         <!-- Imagem da igreja -->
         <div class="cerimonia-imagem">
-          <img
-            src="https://i.ibb.co/3G1skxc/igreja-removebg-preview.png"
-            alt="Igreja Matriz de São João Eudes"
-          />
+          <img src="./imgs/igreja.png" alt="Igreja Matriz de São João Eudes" />
 
           <p class="legenda-imagem">Igreja de São Vicente de Paulo</p>
         </div>
@@ -930,10 +927,7 @@
           </p>
         </div>
         <div class="cerimonia-imagem">
-          <img
-            src="https://i.ibb.co/m5bpvn7B/recep2.png"
-            alt="Festa de Recepção"
-          />
+          <img src="./imgs/recep.png" alt="Festa de Recepção" />
         </div>
 
         <div class="nav-buttons">
@@ -1030,10 +1024,7 @@
 
       <!-- Monograma de Rodapé -->
       <div class="monograma-container">
-        <img
-          src="https://i.ibb.co/KxqLNsYq/Isadora-e-Gabriel-monograma-11.png"
-          alt="Monograma"
-        />
+        <img src="./imgs/monograma.png" alt="Monograma" />
       </div>
     </div>
 
@@ -1180,14 +1171,249 @@
       carregarDados();
 
       // Banco de dados dos presentes
-      let gifts = [];
-
-      async function carregarPresentes() {
-        const response = await fetch(`${API}/presentes?sheet=${sheet}`);
-        gifts = await response.json();
-        renderGifts();
-      }
-      carregarPresentes();
+      let gifts = [
+        {
+          nome: "Primeiro café da manhã como casados",
+          descricao: "",
+          preco: "150",
+          imagem: "./imgs/primeiro_cafe_da_manha_como_casados.png",
+          link_cartao: "https://mpago.la/1Kpu6Wh",
+        },
+        {
+          nome: "Um porta passaporte e tag de mala couro",
+          descricao: "",
+          preco: "170",
+          imagem: "./imgs/um_porta_passaporte_e_tag_de_mala_couro.png",
+          link_cartao: "https://mpago.la/2s3PyRk",
+        },
+        {
+          nome: "Pic Nic romântico",
+          descricao: "",
+          preco: "185",
+          imagem: "./imgs/pic_nic_romantico.png",
+          link_cartao: "https://mpago.la/2qLNEef",
+        },
+        {
+          nome: "Champagne para brindar na Lua de Mel",
+          descricao: "",
+          preco: "200",
+          imagem: "./imgs/champagne_para_brindar_na_lua_de_mel.jpg",
+          link_cartao: "https://mpago.la/1469LcM",
+        },
+        {
+          nome: "Ingressos para teatro",
+          descricao: "",
+          preco: "230",
+          imagem: "./imgs/ingressos_para_teatro.webp",
+          link_cartao: "https://mpago.la/1tTCW1M",
+        },
+        {
+          nome: "Café da manhã na cama durante a lua de mel",
+          descricao: "",
+          preco: "250",
+          imagem: "./imgs/cafe_da_manha_na_cama_durante_a_lua_de_mel.jpg",
+          link_cartao: "https://mpago.la/1AK1jfc",
+        },
+        {
+          nome: "City tour com guia local",
+          descricao: "",
+          preco: "270",
+          imagem: "./imgs/city_tour_com_guia_local.jpg",
+          link_cartao: "https://mpago.la/2ydAznY",
+        },
+        {
+          nome: "Drinks para a noiva aproveitar na Lua de Mel",
+          descricao: "",
+          preco: "300",
+          imagem: "./imgs/drinks_para_a_noiva_aproveitar_na_lua_de_mel.png",
+          link_cartao: "https://mpago.la/1j2J1Br",
+        },
+        {
+          nome: "Visita ao museu da cidade",
+          descricao: "",
+          preco: "320",
+          imagem: "./imgs/visita_ao_museu_da_cidade.jpg",
+          link_cartao: "https://mpago.la/1SyQuT4",
+        },
+        {
+          nome: "Aluguel de um bebê para treinomento",
+          descricao: "",
+          preco: "340",
+          imagem: "./imgs/aluguel_de_um_bebe_para_treinamento.jpg",
+          link_cartao: "https://mpago.la/1s8Tum5",
+        },
+        {
+          nome: "Massagem relaxante para a noiva",
+          descricao: "",
+          preco: "360",
+          imagem: "./imgs/massagem_relaxante_para_a_noiva.png",
+          link_cartao: "https://mpago.la/2TCfBFT",
+        },
+        {
+          nome: "Garanta o jantar do noivo durante o 1º mês de casado",
+          descricao: "",
+          preco: "380",
+          imagem:
+            "./imgs/garanta_o_jantar_do_noivo_durante_o_1o_mes_de_casado.jpg",
+          link_cartao: "https://mpago.la/1NTCJfR",
+        },
+        {
+          nome: "Kimono de jiu-jitsu novo para o noivo",
+          descricao: "",
+          preco: "400",
+          imagem: "./imgs/kimono_de_jiu-jitsu_novo_para_o_noivo.jpg",
+          link_cartao: "https://mpago.la/1H2sBBa",
+        },
+        {
+          nome: "Festa para a noiva arrastar o noivo junto",
+          descricao: "",
+          preco: "425",
+          imagem: "./imgs/festa_para_a_noiva_arrastar_o_noivo_junto.jpg",
+          link_cartao: "https://mpago.la/1X92YWQ",
+        },
+        {
+          nome: "Churrasco com amigos na casa nova",
+          descricao: "",
+          preco: "450",
+          imagem: "./imgs/churrasco_com_amigos_na_casa_nova.png",
+          link_cartao: "https://mpago.la/2ubk2Rd",
+        },
+        {
+          nome: "Combustível para viagem de carro",
+          descricao: "",
+          preco: "475",
+          imagem: "./imgs/combustivel_para_viagem_de_carro.jpg",
+          link_cartao: "https://mpago.la/2t39QZg",
+        },
+        {
+          nome: "Spa para os noivos relaxarem na Lua de Mel",
+          descricao: "",
+          preco: "500",
+          imagem: "./imgs/spa_para_os_noivos_relaxarem_na_lua_de_mel.png",
+          link_cartao: "https://mpago.la/2V3qhGh",
+        },
+        {
+          nome: "Upgrade surpresa na viagem",
+          descricao: "",
+          preco: "525",
+          imagem: "./imgs/upgrade_surpresa_na_viagem.jpg",
+          link_cartao: "https://mpago.la/2PNVfp5",
+        },
+        {
+          nome: "Roteiro personalizado da Lua de Mel",
+          descricao: "",
+          preco: "550",
+          imagem: "./imgs/roteiro_personalizado_da_lua_de_mel.png",
+          link_cartao: "https://mpago.la/2ZLrjfp",
+        },
+        {
+          nome: "Aulas de culinária para os noivos",
+          descricao: "",
+          preco: "575",
+          imagem: "./imgs/aulas_de_culinaria_para_os_noivos.jpg",
+          link_cartao: "https://mpago.la/2VQmCYw",
+        },
+        {
+          nome: "Tour gastronômico na viagem",
+          descricao: "",
+          preco: "600",
+          imagem: "./imgs/tour_gastronomico_na_viagem.jpg",
+          link_cartao: "https://mpago.la/277Hd3e",
+        },
+        {
+          nome: "Ajuda para comprar a moeda local da Lua de Mel",
+          descricao: "",
+          preco: "650",
+          imagem: "./imgs/ajuda_para_comprar_a_moeda_local_da_lua_de_mel.png",
+          link_cartao: "https://mpago.la/2dKL6pe",
+        },
+        {
+          nome: "Jantar romântico durante a Lua de Mel",
+          descricao: "",
+          preco: "700",
+          imagem: "./imgs/jantar_romantico_durante_a_lua_de_mel.jpg",
+          link_cartao: "https://mpago.la/2CT5tRA",
+        },
+        {
+          nome: "Ingressos para um espetáculo durante a viagem",
+          descricao: "",
+          preco: "750",
+          imagem: "./imgs/ingressos_para_um_espetaculo_durante_a_viagem.jpg",
+          link_cartao: "https://mpago.la/1kTGRax",
+        },
+        {
+          nome: "Prioridade no quarto de visita na casa dos noivos",
+          descricao: "",
+          preco: "800",
+          imagem:
+            "./imgs/prioridade_no_quarto_de_visita_na_casa_dos_noivos.jpg",
+          link_cartao: "https://mpago.la/1SXEiqS",
+        },
+        {
+          nome: "Dia de compras na Lua de Mel",
+          descricao: "",
+          preco: "850",
+          imagem: "./imgs/dia_de_compras_na_lua_de_mel.jpg",
+          link_cartao: "https://mpago.la/2cm7Bqs",
+        },
+        {
+          nome: "Noite no cassino para os noivos enricarem",
+          descricao: "",
+          preco: "900",
+          imagem: "./imgs/noite_no_cassino_para_os_noivos_enricarem.jpeg",
+          link_cartao: "https://mpago.la/1MvjF9D",
+        },
+        {
+          nome: "Hospedagem de 1 noite para a Lua de Mel",
+          descricao: "",
+          preco: "950",
+          imagem: "./imgs/hospedagem_de_1_noite_para_a_lua_de_mel.jpg",
+          link_cartao: "https://mpago.la/1ugyPf1",
+        },
+        {
+          nome: "Primeiro supermercado do casal",
+          descricao: "",
+          preco: "1000",
+          imagem: "./imgs/primeiro_supermercado_do_casal.jpg",
+          link_cartao: "https://mpago.la/2Voj9k7",
+        },
+        {
+          nome: "Compras no Duty Free no trajeto da Lua de Mel",
+          descricao: "",
+          preco: "1200",
+          imagem: "./imgs/compras_no_duty_free_no_trajeto_da_lua_de_mel.png",
+          link_cartao: "https://mpago.la/18Up9j8",
+        },
+        {
+          nome: "Upgrade para classe executiva",
+          descricao: "",
+          preco: "1400",
+          imagem: "./imgs/upgrade_para_classe_executiva.png",
+          link_cartao: "https://mpago.la/1tmW3n1",
+        },
+        {
+          nome: "1 ano de assinatura de todos os streamings",
+          descricao: "",
+          preco: "1600",
+          imagem: "./imgs/1_ano_de_assinatura_de_todos_os_streamings.jpg",
+          link_cartao: "https://mpago.la/2HEYepm",
+        },
+        {
+          nome: "Contribuição para o casal pagar uma diarista no primeiro ano juntos",
+          descricao: "",
+          preco: "1800",
+          imagem:
+            "./imgs/contribuicao_para_o_casal_pagar_uma_diarista_no_primeiro_ano_juntos.jpg",
+          link_cartao: "https://mpago.la/2BpXuEd",
+        },
+        {
+          nome: "Passagens aéreas da Lua de Mel",
+          descricao: "",
+          preco: "2000",
+          imagem: "./imgs/passagens_aereas_da_lua_de_mel.png",
+          link_cartao: "https://mpago.la/2e7sCPL",
+        },
+      ];
 
       // Embaralha e Renderiza os Presentes
       function renderGifts() {
@@ -1208,9 +1434,7 @@
                         <span class="gift-price">R$ ${parseFloat(g.preco).toFixed(2)}</span>
                         <div class="gift-buttons">
                             <button class="btn-gift" onclick="generatePixModal(${i})">Pix</button>
-                            <button class="btn-gift" onclick="gerarPagamentoCartao(${i})">
-                                Cartão
-                            </button>
+                            <button class="btn-gift" onclick="generateCartaoModal(${i})">Cartão</button>
                         </div>
                     </div>
                 </div>`;
@@ -1347,39 +1571,14 @@
         }
       }
 
-      async function gerarPagamentoCartao(i) {
-        const presente = gifts[i];
-
-        try {
-          const response = await fetch(`${API}/criar-pagamento`, {
-            method: "POST",
-
-            headers: {
-              "Content-Type": "application/json",
-            },
-
-            body: JSON.stringify({
-              presente: presente.nome,
-              valor: parseFloat(presente.preco),
-              sheet: sheet,
-            }),
-          });
-
-          const dados = await response.json();
-          if (!response.ok) {
-            throw new Error(JSON.stringify(dados, null, 2));
-          }
-
-          if (!dados.link_pagamento) {
-            throw new Error("Link de pagamento não foi retornado.");
-          }
-
-          window.open(dados.link_pagamento, "_blank");
-        } catch (erro) {
-          console.error("Erro ao criar pagamento:", erro);
-
-          alert("Não foi possível iniciar o pagamento.");
-        }
+      function generateCartaoModal(i) {
+        const g = gifts[i];
+        const link = g.link_cartao;
+        document.getElementById("cartaoGiftName").innerText =
+          g.nome + " - R$ " + parseFloat(g.preco).toFixed(2);
+        document.getElementById("btnLinkCartao").href = link;
+        document.getElementById("txtLinkCartao").innerText = link;
+        document.getElementById("cartaoModal").style.display = "flex";
       }
 
       function mostrarLoading() {
